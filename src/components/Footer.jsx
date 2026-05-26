@@ -14,10 +14,10 @@ const teamMembers = [
     color: "#3671C6",
   },
   {
-    name: "Sofia Hamilton",
+    name: "Gianella Lupo Martinez",
     role: "Full Stack Developer",
-    avatar: "SH",
-    color: "#00D2BE",
+    avatar: "GM",
+    color: "#0aaf7e",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© 2024 F1 Store. Todos los derechos reservados.</span>
+        <span>© 2026 F1 Store. Todos los derechos reservados.</span>
         <span className="footer-flag">🏁</span>
       </div>
     </footer>

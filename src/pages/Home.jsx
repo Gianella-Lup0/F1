@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 const HIGHLIGHTS = [
-  { number: "20", label: "Pilotos en pista", icon: "🏎️" },
+  { number: "20", label: "Pilotos en pista", icon: "🚘" },
   { number: "23", label: "GPs por temporada", icon: "🏁" },
   { number: "∞", label: "Velocidad máxima", icon: "⚡" },
 ];
@@ -30,7 +30,7 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-eyebrow">
             <span className="hero-flag">🏁</span>
-            <span>TEMPORADA 2024 · FÓRMULA 1</span>
+            <span>TEMPORADA 2026 · FÓRMULA 1</span>
           </div>
 
           <h1 className="hero-title">
@@ -58,7 +58,7 @@ export default function Home() {
 
         <div className="hero-scroll-indicator">
           <div className="scroll-line" />
-          <span>SCROLL</span>
+          <span>LET GO!</span>
         </div>
       </section>
 
