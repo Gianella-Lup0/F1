@@ -8,7 +8,7 @@ export default function Cart() {
   if (cart.length === 0) {
     return (
       <div className="cart-empty">
-        <div className="cart-empty-icon">🏎️</div>
+        <div className="cart-empty-icon">🏬</div>
         <h2 className="cart-empty-title">TU CARRITO ESTÁ VACÍO</h2>
         <p className="cart-empty-sub">Explora el catálogo y agrega piezas a tu equipo</p>
         <Link to="/productos" className="cart-empty-cta">
