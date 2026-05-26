@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "nombre": "Casco Red Bull Racing RB19",
+    "piloto": "Max Verstappen",
+    "equipo": "Red Bull Racing",
+    "precio": 89999,
+    "categoria": "cascos",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB19+Helmet",
+    "descripcion": "Réplica oficial del casco usado por Max Verstappen en la temporada 2023. Construido con fibra de carbono de grado competición, incluye certificación FIA 8860-2018.",
+    "especificaciones": {
+      "material": "Fibra de Carbono",
+      "peso": "1.2 kg",
+      "certificacion": "FIA 8860-2018",
+      "temporada": "2023"
+    },
+    "rating": 4.9,
+    "stock": 3
+  },
+  {
+    "id": 2,
+    "nombre": "Guantes Ferrari SF-23",
+    "piloto": "Charles Leclerc",
+    "equipo": "Scuderia Ferrari",
+    "precio": 12500,
+    "categoria": "guantes",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=Ferrari+Gloves",
+    "descripcion": "Guantes de competición usados por Charles Leclerc. Fabricados con Nomex ignífugo de triple capa, diseño ergonómico para máximo agarre en el volante.",
+    "especificaciones": {
+      "material": "Nomex Triple Capa",
+      "certificacion": "FIA 8856-2018",
+      "color": "Rojo Ferrari",
+      "talle": "S/M/L/XL"
+    },
+    "rating": 4.7,
+    "stock": 12
+  },
+  {
+    "id": 3,
+    "nombre": "Volante Mercedes W14",
+    "piloto": "Lewis Hamilton",
+    "equipo": "Mercedes-AMG Petronas",
+    "precio": 245000,
+    "categoria": "partes",
+    "imagen": "https://placehold.co/400x300/0A0A0A/00D2BE?text=W14+Wheel",
+    "descripcion": "Volante réplica del Mercedes W14, con todos los controles funcionales. Fibra de carbono con grip de cuero genuino y LEDs de cambio de marcha integrados.",
+    "especificaciones": {
+      "material": "Carbono + Cuero",
+      "leds": "12 LEDs RGB",
+      "conectores": "Compatibles con simuladores",
+      "peso": "2.8 kg"
+    },
+    "rating": 5.0,
+    "stock": 1
+  },
+  {
+    "id": 4,
+    "nombre": "Mono Racing McLaren MCL60",
+    "piloto": "Lando Norris",
+    "equipo": "McLaren F1 Team",
+    "precio": 38000,
+    "categoria": "ropa",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF8000?text=McLaren+Suit",
+    "descripcion": "Mono de piloto réplica McLaren, fabricado en material Nomex ignífugo. Bordado oficial con número #4 de Lando Norris y todos los sponsors de la temporada 2023.",
+    "especificaciones": {
+      "material": "Nomex",
+      "talle": "S/M/L/XL/XXL",
+      "certificacion": "FIA 8856-2018",
+      "color": "Papaya + Negro"
+    },
+    "rating": 4.8,
+    "stock": 7
+  },
+  {
+    "id": 5,
+    "nombre": "Butaca F1 Williams FW45",
+    "piloto": "Alexander Albon",
+    "equipo": "Williams Racing",
+    "precio": 195000,
+    "categoria": "partes",
+    "imagen": "https://placehold.co/400x300/0A0A0A/005AFF?text=Williams+Seat",
+    "descripcion": "Butaca oficial extraída de un FW45 de Williams Racing. Moldeada en fibra de carbono con arneses HANS incluidos. Pieza única de colección.",
+    "especificaciones": {
+      "material": "Fibra de Carbono CFRP",
+      "peso": "4.5 kg",
+      "arneses": "HANS 6 puntos",
+      "año": "2023"
+    },
+    "rating": 4.6,
+    "stock": 1
+  },
+  {
+    "id": 6,
+    "nombre": "Botas Alpinestars Tech 1-Z",
+    "piloto": "Fernando Alonso",
+    "equipo": "Aston Martin",
+    "precio": 28500,
+    "categoria": "ropa",
+    "imagen": "https://placehold.co/400x300/0A0A0A/358C75?text=Alonso+Boots",
+    "descripcion": "Botas de piloto usadas por Fernando Alonso en el GP de Mónaco 2023. Material Nomex con suela especial antideslizante y sistema de velcro lateral.",
+    "especificaciones": {
+      "material": "Nomex + Cuero",
+      "certificacion": "FIA 8856-2018",
+      "talle": "EU 38-47",
+      "uso": "Competición real"
+    },
+    "rating": 4.9,
+    "stock": 2
+  },
+  {
+    "id": 7,
+    "nombre": "Alerón Delantero RB18",
+    "piloto": "Sergio Pérez",
+    "equipo": "Red Bull Racing",
+    "precio": 520000,
+    "categoria": "partes",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB18+Wing",
+    "descripcion": "Alerón delantero original del Red Bull RB18. Pieza usada en competición durante la temporada 2022. Certificado de autenticidad incluido.",
+    "especificaciones": {
+      "material": "Fibra de Carbono",
+      "año": "2022",
+      "autenticidad": "Certificado FIA",
+      "estado": "Usado en carrera"
+    },
+    "rating": 5.0,
+    "stock": 1
+  },
+  {
+    "id": 8,
+    "nombre": "Casco Senna Especial 1994",
+    "piloto": "Ayrton Senna",
+    "equipo": "Williams",
+    "precio": 1200000,
+    "categoria": "cascos",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FFD700?text=Senna+1994",
+    "descripcion": "Réplica autorizada del casco de Ayrton Senna, edición especial conmemorativa 30 aniversario. Numerada 1/100, con certificado de la familia Senna.",
+    "especificaciones": {
+      "material": "Fibra de Carbono",
+      "edicion": "Limitada 1/100",
+      "certificado": "Familia Senna",
+      "año": "Réplica 2024"
+    },
+    "rating": 5.0,
+    "stock": 4
+  }
+]

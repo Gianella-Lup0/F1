@@ -1,0 +1,11 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #080808;
+}
+
+.layout-main {
+  flex: 1;
+  padding-top: 67px; /* header height */
+}
