@@ -16,6 +16,10 @@ const FEATURED_TEAMS = [
   { name: "Williams Racing", color: "#005AFF", wins: "Legendario desde 1977" },
 ];
 
+{/*
+
+*/}
+
 export default function Home() {
   return (
     <div className="home">
