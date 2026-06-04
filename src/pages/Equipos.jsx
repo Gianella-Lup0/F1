@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 export const escuderiasData = {
-  "red-bull-racing": { nombre: "Red Bull Racing", history: "Fundado en 2005, revolucionó la F1 con su diseño aerodinámico implacable.", palmares: "6 Constructores, 7 Pilotos." },
-  "scuderia-ferrari": { nombre: "Scuderia Ferrari", history: "El equipo más antiguo e icónico presente desde 1950.", palmares: "16 Constructores, 15 Pilotos." },
-  "mercedes-amg": { nombre: "Mercedes-AMG Petronas", history: "Dominadores absolutos de la era híbrida moderna de la F1.", palmares: "8 Constructores, 7 Pilotos." },
-  "mclaren": { nombre: "McLaren F1 Team", history: "Fundada por Bruce McLaren, cuna de leyendas como Senna y Prost.", palmares: "8 Constructores, 12 Pilotos." }
+  "red-bull-racing": { nombre: "Red Bull Racing", color: "#0c1d33", accent: "#001a30", history: "Fundado en 2005, revolucionó la F1 con su diseño aerodinámico implacable.", palmares: "6 Constructores, 7 Pilotos." },
+  "scuderia-ferrari": { nombre: "Scuderia Ferrari", color: "#e10600", accent: "#8c0400", history: "El equipo más antiguo e icónico presente desde 1950.", palmares: "16 Constructores, 15 Pilotos." },
+  "mercedes-amg": { nombre: "Mercedes-AMG Petronas", color: "#00d2be", accent: "#00574f", history: "Dominadores absolutos de la era híbrida moderna de la F1.", palmares: "8 Constructores, 7 Pilotos." },
+  "mclaren": { nombre: "McLaren F1 Team", color: "#ff8000", accent: "#9e4f00", history: "Fundada por Bruce McLaren, cuna de leyendas como Senna y Prost.", palmares: "8 Constructores, 12 Pilotos." }
 };
 
 export default function Equipos() {
@@ -14,10 +14,13 @@ export default function Equipos() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "20px" }}>
         {Object.entries(escuderiasData).map(([slug, data]) => (
           <Link to={`/equipo/${slug}`} key={slug} style={{ textDecoration: "none", color: "inherit" }}>
-            <div style={{ backgroundColor: "#141414", padding: "20px", borderRadius: "6px", border: "1px solid #222" }}>
+            <div style={{ 
+              backgroundColor: "#141414", padding: "25px", borderRadius: "8px", 
+              borderLeft: `6px solid ${data.color}`, borderTop: "1px solid #222", borderRight: "1px solid #222", borderBottom: "1px solid #222"
+            }}>
               <h2>{data.nombre}</h2>
-              <p style={{ color: "#e10600", fontWeight: "bold" }}>🏆 {data.palmares.split(",")[0]}</p>
-              <span style={{ color: "#aaa", fontSize: "0.85rem" }}>Ver historia y productos →</span>
+              <p style={{ color: data.color, fontWeight: "bold" }}>🏆 {data.palmares.split(",")[0]}</p>
+              <span style={{ color: "#aaa", fontSize: "0.85rem" }}>Ingresar al Hospitality de boxes →</span>
             </div>
           </Link>
         ))}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import Item from "../components/Item";
 import { toggleFavoritoId } from "./Favoritos";
 import "./ItemListContainer.css";
@@ -12,10 +13,12 @@ export default function ItemListContainer() {
   const [categoria, setCategoria] = useState("todos");
   const [sort, setSort] = useState("default");
   const [isGridView, setIsGridView] = useState(true);
+  
+  const { formatPrice, currency } = useCart();
   const [maxPrecioSelected, setMaxPrecioSelected] = useState(2000000);
   const [limitePrecioAbsoluto, setLimitePrecioAbsoluto] = useState(2000000);
   
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get("q") || "";
   const pilotoQuery = searchParams.get("piloto") || "";
   const [toasts, setToasts] = useState([]);
@@ -60,9 +63,7 @@ export default function ItemListContainer() {
     <div className="catalog-page">
       <div className="toast-container" style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: 1000, display: "flex", flexDirection: "column", gap: "10px" }}>
         {toasts.map(t => (
-          <div key={t.id} style={{ backgroundColor: "#1f1f1f", color: "#fff", borderLeft: "5px solid #e10600", padding: "12px 24px", borderRadius: "4px", fontWeight: "bold" }}>
-            {t.mensaje}
-          </div>
+          <div key={t.id} style={{ backgroundColor: "#1f1f1f", color: "#fff", borderLeft: "5px solid #e10600", padding: "12px 24px", borderRadius: "4px", fontWeight: "bold" }}>{t.mensaje}</div>
         ))}
       </div>
 
@@ -78,13 +79,13 @@ export default function ItemListContainer() {
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "20px" }}>
           <div style={{ minWidth: "250px", flex: 1 }}>
             <label style={{ color: "#aaa", fontSize: "0.85rem", fontWeight: "bold" }}>
-              PRECIO MÁXIMO: <span style={{ color: "#e10600" }}>${maxPrecioSelected.toLocaleString()}</span>
+              PRECIO MÁXIMO: <span style={{ color: "#e10600" }}>{formatPrice(maxPrecioSelected)}</span>
             </label>
             <input type="range" min="0" max={limitePrecioAbsoluto} value={maxPrecioSelected} onChange={(e) => setMaxPrecioSelected(Number(e.target.value))} style={{ width: "100%", accentColor: "#e10600" }} />
           </div>
           <div style={{ display: "flex", gap: "10px" }}>
-            <button onClick={() => setIsGridView(true)} style={{ padding: "8px 12px", backgroundColor: isGridView ? "#e10600" : "#222", color: "#fff", border: "none" }}>🔳 GRILLA</button>
-            <button onClick={() => setIsGridView(false)} style={{ padding: "8px 12px", backgroundColor: !isGridView ? "#e10600" : "#222", color: "#fff", border: "none" }}>☱ LISTA</button>
+            <button onClick={() => setIsGridView(true)} style={{ padding: "8px 12px", backgroundColor: isGridView ? "#e10600" : "#222", color: "#fff", border: "none", cursor: "pointer" }}>🔳 GRILLA</button>
+            <button onClick={() => setIsGridView(false)} style={{ padding: "8px 12px", backgroundColor: !isGridView ? "#e10600" : "#222", color: "#fff", border: "none", cursor: "pointer" }}>☱ LISTA</button>
           </div>
         </div>
       </div>
@@ -108,20 +109,20 @@ export default function ItemListContainer() {
       {loading ? (
         <div className="catalog-grid" style={{ padding: "0 20px" }}>
           {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="skeleton-card" style={{ backgroundColor: "#141414", borderRadius: "8px", padding: "20px", minHeight: "300px", display: "flex", flexDirection: "column", gap: "15px" }}>
-              <div className="skeleton-shimmer" style={{ width: "100%", height: "150px", backgroundColor: "#222" }} />
-              <div className="skeleton-shimmer" style={{ width: "70%", height: "20px", backgroundColor: "#222" }} />
+            <div key={n} className="skeleton-card" style={{ backgroundColor: "#141414", borderRadius: "8px", padding: "20px", minHeight: "260px", display: "flex", flexDirection: "column", gap: "15px" }}>
+              <div className="skeleton-shimmer" style={{ width: "100%", height: "140px", backgroundColor: "#222" }} />
+              <div className="skeleton-shimmer" style={{ width: "60%", height: "20px", backgroundColor: "#222" }} />
             </div>
           ))}
         </div>
       ) : (
         <>
-          <div className="catalog-count">{filtered.length} PRODUCTOS ENCONTRADOS</div>
+          <div className="catalog-count">{filtered.length} ARTÍCULOS EN PARRILLA</div>
           <div className={isGridView ? "catalog-grid" : "catalog-list-view"}>
             {filtered.map((p) => (
               <div key={p.id} style={{ position: "relative" }} className="product-card-wrapper">
-                {p.isLimited && <span style={{ position: "absolute", top: "10px", left: "10px", backgroundColor: "#ffd700", color: "#000", padding: "2px 6px", fontSize: "0.7rem", fontWeight: "bold", zIndex: 5 }}>⚠️ LIMITADO</span>}
-                <button onClick={() => { toggleFavoritoId(p.id); showToast(`❤️ Guardado: ${p.nombre}`); }} style={{ position: "absolute", top: "10px", right: "10px", background: "rgba(0,0,0,0.5)", border: "none", color: "#fff", borderRadius: "50%", padding: "5px", cursor: "pointer", zIndex: 5 }}>❤️</button>
+                {p.isLimited && <span style={{ position: "absolute", top: "10px", left: "10px", backgroundColor: "#ffd700", color: "#000", padding: "2px 6px", fontSize: "0.7rem", fontWeight: "bold", zIndex: 5 }}>⚠️ EDICIÓN LIMITADA</span>}
+                <button onClick={() => { toggleFavoritoId(p.id); showToast(`❤️ Añadido a favoritos: ${p.nombre}`); }} style={{ position: "absolute", top: "10px", right: "10px", background: "rgba(0,0,0,0.6)", border: "none", color: "#fff", borderRadius: "50%", padding: "6px", cursor: "pointer", zIndex: 5 }}>❤️</button>
                 <Item producto={p} viewMode={isGridView ? "grid" : "list"} />
               </div>
             ))}
