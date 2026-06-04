@@ -8,7 +8,7 @@
     "equipoSlug": "red-bull-racing",
     "precio": 89999,
     "categoria": "cascos",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB19+Helmet",
+    "imagen": "/images/CascoRedBullRacingRB19.avif",
     "descripcion": "Réplica oficial del casco usado por Max Verstappen en la temporada 2023. Construido con fibra de carbono de grado competición, incluye certificación FIA 8860-2018.",
     "especificaciones": {
       "material": "Fibra de Carbono",
@@ -31,7 +31,7 @@
     "equipoSlug": "scuderia-ferrari",
     "precio": 12500,
     "categoria": "guantes",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=Ferrari+Gloves",
+    "imagen": "/images/GuantesFerrariSF23.jpeg",
     "descripcion": "Guantes de competición usados por Charles Leclerc. Fabricados con Nomex ignífugo de triple capa, diseño ergonómico para máximo agarre en el volante.",
     "especificaciones": {
       "material": "Nomex Triple Capa",
@@ -52,7 +52,7 @@
     "equipoSlug": "mercedes-amg",
     "precio": 245000,
     "categoria": "partes",
-    "imagen": "https://placehold.co/400x300/0A0A0A/00D2BE?text=W14+Wheel",
+    "imagen": "/images/VolanteMercedesW14.webp",
     "descripcion": "Volante réplica del Mercedes W14, con todos los controles funcionales. Fibra de carbono con grip de cuero genuino y LEDs de cambio de marcha integrados.",
     "especificaciones": {
       "material": "Carbono + Cuero",
@@ -73,7 +73,7 @@
     "equipoSlug": "mclaren",
     "precio": 38000,
     "categoria": "ropa",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF8000?text=McLaren+Suit",
+    "imagen": "/images/MonoRacingMcLarenMCL60.webp",
     "descripcion": "Mono de piloto réplica McLaren, fabricado en material Nomex ignífugo. Bordado oficial con número #4 de Lando Norris y todos los sponsors de la temporada 2023.",
     "especificaciones": {
       "material": "Nomex",
@@ -87,23 +87,23 @@
   },
   {
     "id": 5,
-    "nombre": "Butaca F1 Williams FW45",
+    "nombre": "Gorra Williams Racing Team",
     "piloto": "Alexander Albon",
     "pilotoSlug": "alexander-albon",
     "equipo": "Williams Racing",
     "equipoSlug": "williams",
-    "precio": 195000,
-    "categoria": "partes",
-    "imagen": "https://placehold.co/400x300/0A0A0A/005AFF?text=Williams+Seat",
-    "descripcion": "Butaca oficial extraída de un FW45 de Williams Racing. Moldeada en fibra de carbono con arneses HANS incluidos. Pieza única de colección.",
+    "precio": 6500,
+    "categoria": "ropa",
+    "imagen": "/images/GorraWilliamsRacingTeam.jpg",
+    "descripcion": "Gorra oficial del equipo Williams Racing, temporada 2023. Diseño con visera curva, logo bordado en alta definición y broche ajustable metálico.",
     "especificaciones": {
-      "material": "Fibra de Carbono CFRP",
-      "peso": "4.5 kg",
-      "arneses": "HANS 6 puntos",
+      "material": "100% Algodón",
+      "talle": "Ajustable Único",
+      "color": "Azul Marino",
       "año": "2023"
     },
     "rating": 4.6,
-    "stock": 1,
+    "stock": 15,
     "reviews": []
   },
   {
@@ -115,7 +115,7 @@
     "equipoSlug": "aston-martin",
     "precio": 28500,
     "categoria": "ropa",
-    "imagen": "https://placehold.co/400x300/0A0A0A/358C75?text=Alonso+Boots",
+    "imagen": "/images/BotasAlpinestarsTech1Z.jpg",
     "descripcion": "Botas de piloto usadas por Fernando Alonso en el GP de Mónaco 2023. Material Nomex con suela especial antideslizante y sistema de velcro lateral.",
     "especificaciones": {
       "material": "Nomex + Cuero",
@@ -129,23 +129,23 @@
   },
   {
     "id": 7,
-    "nombre": "Alerón Delantero RB18",
+    "nombre": "Modelo Red Bull RB18 Checo Perez 1:43",
     "piloto": "Sergio Pérez",
     "pilotoSlug": "sergio-perez",
     "equipo": "Red Bull Racing",
     "equipoSlug": "red-bull-racing",
-    "precio": 520000,
-    "categoria": "partes",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB18+Wing",
-    "descripcion": "Alerón delantero original del Red Bull RB18. Pieza usada en competición durante la temporada 2022. Certificado de autenticidad incluido.",
+    "precio": 18500,
+    "categoria": "modelos",
+    "imagen": "/images/ModeloRedBullRB18ChecoPerez143.jpg",
+    "descripcion": "Modelo a escala coleccionable 1:43 del monoplaza RB18 con el que Checo Pérez ganó en Mónaco 2022. Incluye base de exhibición y acrílico protector.",
     "especificaciones": {
-      "material": "Fibra de Carbono",
+      "escala": "1:43",
+      "material": "Diecast Metal y Plástico",
       "año": "2022",
-      "autenticidad": "Certificado FIA",
-      "estado": "Usado en carrera"
+      "fabricante": "Burago"
     },
-    "rating": 5.0,
-    "stock": 1,
+    "rating": 4.7,
+    "stock": 6,
     "reviews": []
   },
   {
@@ -157,7 +157,7 @@
     "equipoSlug": "williams",
     "precio": 1200000,
     "categoria": "ediciones-limitadas",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FFD700?text=Senna+1994",
+    "imagen": "/images/CascoSennaEspecial1994.jpg",
     "descripcion": "Réplica autorizada del casco de Ayrton Senna, edición especial conmemorativa 30 aniversario. Numerada 1/100, con certificado de la familia Senna.",
     "especificaciones": {
       "material": "Fibra de Carbono",
@@ -179,7 +179,7 @@
     "equipoSlug": "red-bull-racing",
     "precio": 45000,
     "categoria": "modelos",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB20+Scale+1-18",
+    "imagen": "/images/RedBullRB20MaxVerstappen118.jpg",
     "descripcion": "Modelo a escala de alta precisión 1:18 del monoplaza RB20. Detalles exactos de carrocería y auspiciantes.",
     "especificaciones": {
       "escala": "1:18",
@@ -192,14 +192,14 @@
   },
   {
     "id": 10,
-    "nombre": "Poster Histórico Monza - Il Tempio della Velocità",
+    "nombre": "Poster Historico Monza Art",
     "piloto": "Nadie",
     "pilotoSlug": "ninguno",
     "equipo": "Neutral",
     "equipoSlug": "neutral",
     "precio": 4500,
     "categoria": "posters",
-    "imagen": "https://placehold.co/400x300/0A0A0A/333333?text=Monza+Art+Poster",
+    "imagen": "/images/PosterHistoricoMonzaArt.webp",
     "descripcion": "Impresión artística premium en papel mate de alta definición dedicada al mítico Autodromo Nazionale di Monza.",
     "especificaciones": {
       "tamaño": "50x70 cm",
@@ -212,15 +212,15 @@
   },
   {
     "id": 11,
-    "nombre": "Libro Biográfico: Michael Schumacher (Tapa Dura)",
+    "nombre": "Libro Biografico Schumacher",
     "piloto": "Michael Schumacher",
     "pilotoSlug": "michael-schumacher",
     "equipo": "Scuderia Ferrari",
     "equipoSlug": "scuderia-ferrari",
     "precio": 8900,
     "categoria": "libros",
-    "imagen": "https://placehold.co/400x300/0A0A0A/222222?text=Schumacher+Biography",
-    "descripcion": "La biografía definitiva del Káiser. Relatos de sus campeonatos mundiales, secretos en boxes y su legacy eterno.",
+    "imagen": "/images/LibroBiograficoSchumacher.jpg",
+    "descripcion": "La biografía definitiva del Káiser. Relatos de sus campeonatos mundiales, secrets en boxes y su legacy eterno.",
     "especificaciones": {
       "paginas": "412",
       "idioma": "Español",
@@ -232,14 +232,14 @@
   },
   {
     "id": 12,
-    "nombre": "Paddock Club Pass - Fin de Semana Completo",
+    "nombre": "Paddock Club Pass VIP",
     "piloto": "Nadie",
     "pilotoSlug": "ninguno",
     "equipo": "Neutral",
     "equipoSlug": "neutral",
     "precio": 1850000,
     "categoria": "experiencias",
-    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=Paddock+Club+VIP",
+    "imagen": "/images/PaddockClubPassVIP.jpg",
     "descripcion": "Acceso VIP exclusivo. Incluye Pit Lane Walk, catering gourmet, vistas privilegiadas sobre la grilla de partida y simuladores oficiales.",
     "especificaciones": {
       "duracion": "3 Días (Vie-Dom)",
