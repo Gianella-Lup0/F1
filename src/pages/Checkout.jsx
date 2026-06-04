@@ -1,58 +1,36 @@
 import { useState } from "react";
-import { useCart } from "../context/CartContext";
+import productosJson from "../../public/productos.json";
 
-export default function Checkout() {
-  const { cart, clearCart } = useCart() || { cart: [], clearCart: () => {} }; // Fallback preventivo
-  const [completado, setCompletado] = useState(false);
-  const [formData, setFormData] = useState({ nombre: "", email: "", direccion: "", ciudad: "", tarjeta: "" });
+export default function Comparador() {
+  const [seleccionados, setSeleccionados] = useState([]);
 
-  const total = cart.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!formData.nombre || !formData.email || !formData.direccion) {
-      alert("Por favor completa los campos obligatorios para el envío.");
-      return;
-    }
-    setCompletado(true);
-    clearCart();
+  const agregarAlComparador = (e) => {
+    const id = parseInt(e.target.value);
+    if (!id) return;
+    if (seleccionados.length >= 3) return alert("Máximo 3 productos.");
+    if (seleccionados.find(p => p.id === id)) return;
+    setSeleccionados([...seleccionados, productosJson.find(p => p.id === id)]);
   };
 
-  if (completado) {
-    return (
-      <div style={{ padding: "60px 20px", color: "#fff", textAlign: "center" }}>
-        <h1 style={{ color: "#00b050" }}>🏁 ¡ORDEN PROCESADA CON ÉXITO!</h1>
-        <p style={{ fontSize: "1.2rem", color: "#ccc" }}>Tu pedido ha sido enviado a Boxes. Se te notificará por Email cuando el camión logístico salga hacia tu dirección.</p>
-      </div>
-    );
-  }
-
   return (
-    <div style={{ padding: "40px 20px", color: "#fff", display: "flex", flexWrap: "wrap", gap: "40px" }}>
-      <div style={{ flex: 1, minWidth: "300px" }}>
-        <h2>Datos de Envío y Pago</h2>
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-          <input type="text" placeholder="Nombre completo *" required value={formData.nombre} onChange={e => setFormData({...formData, nombre: e.target.value})} style={{ padding: "10px", backgroundColor: "#111", color: "#fff", border: "1px solid #333" }} />
-          <input type="email" placeholder="Correo Electrónico *" required value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} style={{ padding: "10px", backgroundColor: "#111", color: "#fff", border: "1px solid #333" }} />
-          <input type="text" placeholder="Dirección de entrega *" required value={formData.direccion} onChange={e => setFormData({...formData, direccion: e.target.value})} style={{ padding: "10px", backgroundColor: "#111", color: "#fff", border: "1px solid #333" }} />
-          <input type="text" placeholder="Ciudad *" required value={formData.ciudad} onChange={e => setFormData({...formData, ciudad: e.target.value})} style={{ padding: "10px", backgroundColor: "#111", color: "#fff", border: "1px solid #333" }} />
-          <input type="text" placeholder="Número de Tarjeta (Ficticio para simulación)" value={formData.tarjeta} onChange={e => setFormData({...formData, tarjeta: e.target.value})} style={{ padding: "10px", backgroundColor: "#111", color: "#fff", border: "1px solid #333" }} />
-          <button type="submit" style={{ backgroundColor: "#e10600", color: "#fff", border: "none", padding: "15px", fontWeight: "bold", cursor: "pointer", fontSize: "1.1rem" }}>CONFIRMAR COMPRA</button>
-        </form>
-      </div>
-
-      <div style={{ flex: 1, minWidth: "300px", backgroundColor: "#141414", padding: "20px", borderRadius: "8px" }}>
-        <h2>Resumen del Pedido</h2>
-        {cart.map(item => (
-          <div key={item.id} style={{ display: "flex", justifyContent: "space-between", margin: "10px 0", borderBottom: "1px solid #222", paddingBottom: "10px" }}>
-            <span>{item.nombre} (x{item.cantidad})</span>
-            <span>${(item.precio * item.cantidad).toLocaleString()}</span>
+    <div style={{ padding: "40px 20px", color: "#fff" }}>
+      <h1 style={{ borderLeft: "5px solid #e10600", paddingLeft: "10px", marginBottom: "20px" }}>COMPARADOR</h1>
+      <select onChange={agregarAlComparador} style={{ padding: "8px", backgroundColor: "#111", color: "#fff", border: "1px solid #333", marginBottom: "20px" }}>
+        <option value="">-- Añadir producto --</option>
+        {productosJson.map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}
+      </select>
+      <div style={{ display: "flex", gap: "20px", overflowX: "auto" }}>
+        {seleccionados.map(p => (
+          <div key={p.id} style={{ backgroundColor: "#141414", padding: "20px", minWidth: "250px", flex: 1, border: "1px solid #333" }}>
+            <button onClick={() => setSeleccionados(seleccionados.filter(item => item.id !== p.id))} style={{ backgroundColor: "#e10600", color: "#fff", border: "none", cursor: "pointer" }}>Quitar</button>
+            <h3>{p.nombre}</h3>
+            <p style={{ color: "#e10600", fontWeight: "bold" }}>${p.precio.toLocaleString()}</p>
+            <p>Rating: ⭐ {p.rating}</p>
+            <div style={{ borderTop: "1px solid #333", marginTop: "10px", paddingTop: "10px" }}>
+              {Object.entries(p.especificaciones).map(([k, v]) => <div key={k} style={{ fontSize: "0.85rem" }}><span style={{ color: "#aaa" }}>{k}:</span> {v}</div>)}
+            </div>
           </div>
         ))}
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "1.4rem", fontWeight: "bold", marginTop: "20px", color: "#e10600" }}>
-          <span>TOTAL:</span>
-          <span>${total.toLocaleString()}</span>
-        </div>
       </div>
     </div>
   );

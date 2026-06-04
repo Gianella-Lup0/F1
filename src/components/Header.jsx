@@ -28,7 +28,7 @@ export default function Header() {
         </Link>
 
         {/* BUSCADOR INTEGRADO */}
-        <div className="header-search-container" style={{ margin: "0 20px", flex: 1, maxWidth: "300px" }}>
+        <div className="header-search-container" style={{ margin: "0 20px", flex: 1, maxWidth: "250px" }}>
           <input
             type="text"
             placeholder="🏎️ Buscar producto..."
@@ -36,7 +36,7 @@ export default function Header() {
             onChange={handleSearch}
             style={{
               width: "100%",
-              padding: "8px 12px",
+              padding: "6px 12px",
               borderRadius: "4px",
               border: "1px solid #333",
               backgroundColor: "#111",
@@ -67,7 +67,12 @@ export default function Header() {
           </Link>
         </nav>
 
-        <CartWidget />
+        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+          <Link to="/comparador" title="Comparar" style={{ textDecoration: "none", fontSize: "1.1rem" }}>
+            📊
+          </Link>
+          <CartWidget />
+        </div>
       </div>
     </header>
   );

@@ -187,3 +187,37 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+
+
+/* --- SKELETON ANIMATION --- */
+@keyframes f1-skeleton-pulse {
+  0% { opacity: 0.6; background-color: #1a1a1a; }
+  50% { opacity: 1; background-color: #2a2a2a; }
+  100% { opacity: 0.6; background-color: #1a1a1a; }
+}
+.skeleton-card .skeleton-shimmer {
+  animation: f1-skeleton-pulse 1.5s infinite ease-in-out;
+}
+
+/* --- LIST VIEW DESIGN --- */
+.catalog-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.catalog-list-view .product-card-wrapper > div {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 20px !important;
+  padding: 10px 25px !important;
+}
+.catalog-list-view .product-card-wrapper img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain !important;
+}

@@ -3,7 +3,9 @@
     "id": 1,
     "nombre": "Casco Red Bull Racing RB19",
     "piloto": "Max Verstappen",
+    "pilotoSlug": "max-verstappen",
     "equipo": "Red Bull Racing",
+    "equipoSlug": "red-bull-racing",
     "precio": 89999,
     "categoria": "cascos",
     "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB19+Helmet",
@@ -15,13 +17,18 @@
       "temporada": "2023"
     },
     "rating": 4.9,
-    "stock": 3
+    "stock": 3,
+    "reviews": [
+      {"usuario": "Carlos M.", "rating": 5, "comentario": "Increíble calidad, idéntico al real."}
+    ]
   },
   {
     "id": 2,
     "nombre": "Guantes Ferrari SF-23",
     "piloto": "Charles Leclerc",
+    "pilotoSlug": "charles-leclerc",
     "equipo": "Scuderia Ferrari",
+    "equipoSlug": "scuderia-ferrari",
     "precio": 12500,
     "categoria": "guantes",
     "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=Ferrari+Gloves",
@@ -33,13 +40,16 @@
       "talle": "S/M/L/XL"
     },
     "rating": 4.7,
-    "stock": 12
+    "stock": 12,
+    "reviews": []
   },
   {
     "id": 3,
     "nombre": "Volante Mercedes W14",
     "piloto": "Lewis Hamilton",
+    "pilotoSlug": "lewis-hamilton",
     "equipo": "Mercedes-AMG Petronas",
+    "equipoSlug": "mercedes-amg",
     "precio": 245000,
     "categoria": "partes",
     "imagen": "https://placehold.co/400x300/0A0A0A/00D2BE?text=W14+Wheel",
@@ -51,13 +61,16 @@
       "peso": "2.8 kg"
     },
     "rating": 5.0,
-    "stock": 1
+    "stock": 1,
+    "reviews": []
   },
   {
     "id": 4,
     "nombre": "Mono Racing McLaren MCL60",
     "piloto": "Lando Norris",
+    "pilotoSlug": "lando-norris",
     "equipo": "McLaren F1 Team",
+    "equipoSlug": "mclaren",
     "precio": 38000,
     "categoria": "ropa",
     "imagen": "https://placehold.co/400x300/0A0A0A/FF8000?text=McLaren+Suit",
@@ -69,13 +82,16 @@
       "color": "Papaya + Negro"
     },
     "rating": 4.8,
-    "stock": 7
+    "stock": 7,
+    "reviews": []
   },
   {
     "id": 5,
     "nombre": "Butaca F1 Williams FW45",
     "piloto": "Alexander Albon",
+    "pilotoSlug": "alexander-albon",
     "equipo": "Williams Racing",
+    "equipoSlug": "williams",
     "precio": 195000,
     "categoria": "partes",
     "imagen": "https://placehold.co/400x300/0A0A0A/005AFF?text=Williams+Seat",
@@ -87,13 +103,16 @@
       "año": "2023"
     },
     "rating": 4.6,
-    "stock": 1
+    "stock": 1,
+    "reviews": []
   },
   {
     "id": 6,
     "nombre": "Botas Alpinestars Tech 1-Z",
     "piloto": "Fernando Alonso",
+    "pilotoSlug": "fernando-alonso",
     "equipo": "Aston Martin",
+    "equipoSlug": "aston-martin",
     "precio": 28500,
     "categoria": "ropa",
     "imagen": "https://placehold.co/400x300/0A0A0A/358C75?text=Alonso+Boots",
@@ -105,13 +124,16 @@
       "uso": "Competición real"
     },
     "rating": 4.9,
-    "stock": 2
+    "stock": 2,
+    "reviews": []
   },
   {
     "id": 7,
     "nombre": "Alerón Delantero RB18",
     "piloto": "Sergio Pérez",
+    "pilotoSlug": "sergio-perez",
     "equipo": "Red Bull Racing",
+    "equipoSlug": "red-bull-racing",
     "precio": 520000,
     "categoria": "partes",
     "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB18+Wing",
@@ -123,15 +145,18 @@
       "estado": "Usado en carrera"
     },
     "rating": 5.0,
-    "stock": 1
+    "stock": 1,
+    "reviews": []
   },
   {
     "id": 8,
     "nombre": "Casco Senna Especial 1994",
     "piloto": "Ayrton Senna",
+    "pilotoSlug": "ayrton-senna",
     "equipo": "Williams",
+    "equipoSlug": "williams",
     "precio": 1200000,
-    "categoria": "cascos",
+    "categoria": "ediciones-limitadas",
     "imagen": "https://placehold.co/400x300/0A0A0A/FFD700?text=Senna+1994",
     "descripcion": "Réplica autorizada del casco de Ayrton Senna, edición especial conmemorativa 30 aniversario. Numerada 1/100, con certificado de la familia Senna.",
     "especificaciones": {
@@ -141,6 +166,88 @@
       "año": "Réplica 2024"
     },
     "rating": 5.0,
-    "stock": 4
+    "stock": 4,
+    "isLimited": true,
+    "limiteUnidades": 100
+  },
+  {
+    "id": 9,
+    "nombre": "Red Bull RB20 Max Verstappen 1:18",
+    "piloto": "Max Verstappen",
+    "pilotoSlug": "max-verstappen",
+    "equipo": "Red Bull Racing",
+    "equipoSlug": "red-bull-racing",
+    "precio": 45000,
+    "categoria": "modelos",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=RB20+Scale+1-18",
+    "descripcion": "Modelo a escala de alta precisión 1:18 del monoplaza RB20. Detalles exactos de carrocería y auspiciantes.",
+    "especificaciones": {
+      "escala": "1:18",
+      "material": "Diecast Metal",
+      "año": "2024"
+    },
+    "rating": 4.9,
+    "stock": 8,
+    "reviews": []
+  },
+  {
+    "id": 10,
+    "nombre": "Poster Histórico Monza - Il Tempio della Velocità",
+    "piloto": "Nadie",
+    "pilotoSlug": "ninguno",
+    "equipo": "Neutral",
+    "equipoSlug": "neutral",
+    "precio": 4500,
+    "categoria": "posters",
+    "imagen": "https://placehold.co/400x300/0A0A0A/333333?text=Monza+Art+Poster",
+    "descripcion": "Impresión artística premium en papel mate de alta definición dedicada al mítico Autodromo Nazionale di Monza.",
+    "especificaciones": {
+      "tamaño": "50x70 cm",
+      "papel": "Ilustración 300g",
+      "origen": "Italia"
+    },
+    "rating": 4.8,
+    "stock": 25,
+    "reviews": []
+  },
+  {
+    "id": 11,
+    "nombre": "Libro Biográfico: Michael Schumacher (Tapa Dura)",
+    "piloto": "Michael Schumacher",
+    "pilotoSlug": "michael-schumacher",
+    "equipo": "Scuderia Ferrari",
+    "equipoSlug": "scuderia-ferrari",
+    "precio": 8900,
+    "categoria": "libros",
+    "imagen": "https://placehold.co/400x300/0A0A0A/222222?text=Schumacher+Biography",
+    "descripcion": "La biografía definitiva del Káiser. Relatos de sus campeonatos mundiales, secretos en boxes y su legacy eterno.",
+    "especificaciones": {
+      "paginas": "412",
+      "idioma": "Español",
+      "editorial": "Pitlane Press"
+    },
+    "rating": 5.0,
+    "stock": 5,
+    "reviews": []
+  },
+  {
+    "id": 12,
+    "nombre": "Paddock Club Pass - Fin de Semana Completo",
+    "piloto": "Nadie",
+    "pilotoSlug": "ninguno",
+    "equipo": "Neutral",
+    "equipoSlug": "neutral",
+    "precio": 1850000,
+    "categoria": "experiencias",
+    "imagen": "https://placehold.co/400x300/0A0A0A/FF1E00?text=Paddock+Club+VIP",
+    "descripcion": "Acceso VIP exclusivo. Incluye Pit Lane Walk, catering gourmet, vistas privilegiadas sobre la grilla de partida y simuladores oficiales.",
+    "especificaciones": {
+      "duracion": "3 Días (Vie-Dom)",
+      "hospitality": "Open Bar Premium",
+      "pases": "Credencial física RFID"
+    },
+    "rating": 5.0,
+    "stock": 0,
+    "reviews": []
   }
 ]

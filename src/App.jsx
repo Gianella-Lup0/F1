@@ -6,7 +6,7 @@ import ItemListContainer from "./pages/ItemListContainer";
 import ItemDetail from "./pages/ItemDetail";
 import Cart from "./pages/Cart";
 
-// NUEVAS PÁGINAS
+// NUEVAS VISTAS
 import Equipos from "./pages/Equipos";
 import EquipoDetalle from "./pages/EquipoDetalle";
 import Pilotos from "./pages/Pilotos";
@@ -27,7 +27,7 @@ export default function App() {
             <Route path="/producto/:id" element={<ItemDetail />} />
             <Route path="/carrito" element={<Cart />} />
             
-            {/* NUEVAS RUTAS */}
+            {/* NUEVAS RUTAS DE F1 */}
             <Route path="/equipos" element={<Equipos />} />
             <Route path="/equipo/:slug" element={<EquipoDetalle />} />
             <Route path="/pilotos" element={<Pilotos />} />
@@ -36,7 +36,7 @@ export default function App() {
             <Route path="/comparador" element={<Comparador />} />
             <Route path="/checkout" element={<Checkout />} />
             
-            {/* 404 PERSONALIZADA */}
+            {/* FALLBACK 404 BANDERA ROJA */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
